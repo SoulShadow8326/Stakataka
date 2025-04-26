@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -53,44 +52,23 @@ export default function PricingSection() {
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-4 text-[#EDEDED]"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#EDEDED] opacity-0 translate-y-4 animate-[fadeIn_0.6s_ease-out_forwards]">
             <span className="text-[#7851A9]">Pricing</span> Options
-          </motion.h2>
-          <motion.p
-            className="text-lg text-[#EDEDED]/80 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          </h2>
+          <p className="text-lg text-[#EDEDED]/80 max-w-2xl mx-auto opacity-0 translate-y-4 animate-[fadeIn_0.6s_0.2s_ease-out_forwards]">
             Flexible pricing to meet your organization's needs with our sustainability program offering trade-in
             recycling credits.
-          </motion.p>
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingPlans.map((plan, index) => (
-            <motion.div
+            <div
               key={index}
               className={`bg-gradient-to-br from-[#010B13] to-[#0A1A2A] rounded-xl border ${
                 plan.highlighted ? "border-[#FFD700] shadow-lg shadow-[#FFD700]/10" : "border-[#7851A9]/20"
-              } overflow-hidden transition-all duration-300`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{
-                y: -5,
-                boxShadow: plan.highlighted
-                  ? "0 15px 30px -10px rgba(255, 215, 0, 0.2)"
-                  : "0 10px 30px -15px rgba(120, 81, 169, 0.2)",
-              }}
+              } overflow-hidden transition-all duration-300 opacity-0 translate-y-8 animate-[fadeIn_0.5s_ease-out_forwards]`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               {plan.highlighted && (
                 <div className="bg-[#FFD700] text-[#010B13] text-center py-1 font-medium">Most Popular</div>
@@ -125,22 +103,16 @@ export default function PricingSection() {
                   Contact Sales
                 </Button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          className="mt-12 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
+        <div className="mt-12 text-center opacity-0 translate-y-4 animate-[fadeIn_0.6s_0.5s_ease-out_forwards]">
           <p className="text-[#EDEDED]/80">
             <span className="text-[#7851A9] font-medium">Sustainability Program:</span> Old units eligible for trade-in
             recycling credits.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

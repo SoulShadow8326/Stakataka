@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
 
 export default function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -75,40 +74,20 @@ export default function HeroSection() {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#7851A9] via-[#7851A9] to-[#FFD700] bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#7851A9] via-[#7851A9] to-[#FFD700] bg-clip-text text-transparent opacity-0 translate-y-4 animate-[fadeIn_0.8s_ease-out_forwards]">
             Stakataka
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            className="text-2xl md:text-3xl mb-8 text-[#EDEDED]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <p className="text-2xl md:text-3xl mb-8 text-[#EDEDED] opacity-0 translate-y-4 animate-[fadeIn_0.8s_0.2s_ease-out_forwards]">
             Stack Smarter. Store Greener.
-          </motion.p>
+          </p>
 
-          <motion.p
-            className="text-lg md:text-xl mb-12 text-[#EDEDED]/80 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
+          <p className="text-lg md:text-xl mb-12 text-[#EDEDED]/80 max-w-2xl mx-auto opacity-0 translate-y-4 animate-[fadeIn_0.8s_0.4s_ease-out_forwards]">
             The next-gen sustainable data storage solution engineered for modern data centers. Revolutionize your
             infrastructure with our eco-friendly, high-performance technology.
-          </motion.p>
+          </p>
 
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
+          <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 translate-y-4 animate-[fadeIn_0.8s_0.6s_ease-out_forwards]">
             <Button
               className="bg-[#FFD700] hover:bg-[#FFD700]/90 text-[#010B13] font-bold text-lg px-8 py-6"
               size="lg"
@@ -121,7 +100,7 @@ export default function HeroSection() {
             >
               Explore Features
             </Button>
-          </motion.div>
+          </div>
         </div>
       </div>
 

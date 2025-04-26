@@ -1,7 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
-
 const steps = [
   {
     number: "01",
@@ -40,35 +38,20 @@ export default function HowItWorksSection() {
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-4 text-[#EDEDED]"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#EDEDED] opacity-0 translate-y-4 animate-[fadeIn_0.6s_ease-out_forwards]">
             How <span className="text-[#7851A9]">Stakataka</span> Works
-          </motion.h2>
-          <motion.p
-            className="text-lg text-[#EDEDED]/80 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          </h2>
+          <p className="text-lg text-[#EDEDED]/80 max-w-2xl mx-auto opacity-0 translate-y-4 animate-[fadeIn_0.6s_0.2s_ease-out_forwards]">
             Our revolutionary approach to data storage combines innovative engineering with sustainable design.
-          </motion.p>
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           {steps.map((step, index) => (
-            <motion.div
+            <div
               key={index}
-              className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-12 relative"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-12 relative opacity-0 -translate-x-8 animate-[slideInRight_0.6s_ease-out_forwards]"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Step number */}
               <div className="flex-shrink-0">
@@ -87,7 +70,7 @@ export default function HowItWorksSection() {
               {index < steps.length - 1 && (
                 <div className="absolute top-16 left-8 h-12 w-0.5 bg-gradient-to-b from-[#7851A9]/50 to-transparent hidden md:block"></div>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

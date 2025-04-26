@@ -1,7 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
-
 const specifications = [
   { name: "Dimensions", value: "45cm × 45cm × 15cm per unit" },
   { name: "Material", value: "Recyclable Aluminum Alloy" },
@@ -23,46 +21,25 @@ export default function SpecsSection() {
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-4 text-[#EDEDED]"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#EDEDED] opacity-0 translate-y-4 animate-[fadeIn_0.6s_ease-out_forwards]">
             Technical <span className="text-[#7851A9]">Specifications</span>
-          </motion.h2>
-          <motion.p
-            className="text-lg text-[#EDEDED]/80 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          </h2>
+          <p className="text-lg text-[#EDEDED]/80 max-w-2xl mx-auto opacity-0 translate-y-4 animate-[fadeIn_0.6s_0.2s_ease-out_forwards]">
             Engineered for optimal performance with sustainable materials and energy-efficient design.
-          </motion.p>
+          </p>
         </div>
 
-        <motion.div
-          className="max-w-3xl mx-auto bg-gradient-to-br from-[#010B13] to-[#0A1A2A] rounded-xl border border-[#7851A9]/20 overflow-hidden"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        <div className="max-w-3xl mx-auto bg-gradient-to-br from-[#010B13] to-[#0A1A2A] rounded-xl border border-[#7851A9]/20 overflow-hidden opacity-0 translate-y-8 animate-[fadeIn_0.8s_ease-out_forwards]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
             {specifications.map((spec, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="p-4 border-b border-[#EDEDED]/10 last:border-b-0"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.1 * index }}
+                className="p-4 border-b border-[#EDEDED]/10 last:border-b-0 opacity-0 translate-y-4 animate-[fadeIn_0.4s_ease-out_forwards]"
+                style={{ animationDelay: `${0.1 * index}s` }}
               >
                 <div className="text-[#7851A9] font-medium mb-1">{spec.name}</div>
                 <div className="text-[#EDEDED]">{spec.value}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -71,7 +48,7 @@ export default function SpecsSection() {
               All specifications are subject to change. Contact our team for the most up-to-date information.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

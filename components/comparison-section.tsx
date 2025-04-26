@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Check, X } from "lucide-react"
 
 const comparisonData = [
@@ -46,33 +45,15 @@ export default function ComparisonSection() {
     <section id="comparison" className="py-20 bg-[#010B13]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-4 text-[#EDEDED]"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#EDEDED] opacity-0 translate-y-4 animate-[fadeIn_0.6s_ease-out_forwards]">
             Why Choose <span className="text-[#7851A9]">Stakataka</span>?
-          </motion.h2>
-          <motion.p
-            className="text-lg text-[#EDEDED]/80 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          </h2>
+          <p className="text-lg text-[#EDEDED]/80 max-w-2xl mx-auto opacity-0 translate-y-4 animate-[fadeIn_0.6s_0.2s_ease-out_forwards]">
             See how Stakataka outperforms traditional data center storage solutions across key metrics.
-          </motion.p>
+          </p>
         </div>
 
-        <motion.div
-          className="max-w-4xl mx-auto overflow-x-auto"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        <div className="max-w-4xl mx-auto overflow-x-auto opacity-0 translate-y-8 animate-[fadeIn_0.8s_ease-out_forwards]">
           <table className="w-full border-collapse">
             <thead>
               <tr>
@@ -114,7 +95,7 @@ export default function ComparisonSection() {
               </tr>
             </tfoot>
           </table>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
