@@ -47,8 +47,11 @@ export default function CtaSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="h-40 flex items-center justify-center"
           >
-            {/* Image placeholder - you'll add your own image here */}
-            <div className="text-center text-[#EDEDED]/60">Image placeholder - you'll add your own image here</div>
+         <img 
+          src="https://raw.githubusercontent.com/SoulShadow8326/Stakataka/main/stakataka-landing-final/stakataka-landing/assets/product.png" 
+          alt="Stakataka Product" 
+          className="h-40 object-contain" 
+          />
           </motion.div>
         </motion.div>
       </div>
